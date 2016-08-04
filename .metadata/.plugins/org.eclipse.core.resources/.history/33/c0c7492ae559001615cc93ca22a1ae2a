@@ -1,0 +1,7 @@
+package com.qait.gateway.testCases;
+
+import com.qait.gateway.deploytool.DeploymentToolLogin;
+
+public class TestSuite_1{
+	new DeploymentToolLogin().ValidLogin();
+}

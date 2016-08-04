@@ -1,0 +1,36 @@
+package com.qait.gateway.testCases;
+
+import javax.swing.JOptionPane;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.qait.gateway.Utils.UiUtils;
+import com.qait.gateway.deploytool.DeploymentToolLogin;
+import com.qait.gateway.deploytool.LTICourseCreation;
+import com.qait.gateway.deploytool.PartnerCourseTest;
+
+public class TestSuite_1 extends UiUtils{
+	
+	static WebDriver driver;
+	@BeforeClass
+	public WebDriver PreConditions(){
+		String browser=JOptionPane.showInputDialog("Brower?");	//JOption pane to take the input for desired browser
+		return driver=SelectBrowser(browser);
+	}
+	@Test
+	public void logginIntoDeploymentTool() throws InterruptedException {
+		new DeploymentToolLogin().ValidLogin(driver);
+	}
+	@Test
+	public void createLTICourse(){
+		new LTICourseCreation().createMindTapCourse(driver);
+	}
+	
+	public void testingTheCreatedCourse(){
+		new PartnerCourseTest()
+	}
+	
+	
+}

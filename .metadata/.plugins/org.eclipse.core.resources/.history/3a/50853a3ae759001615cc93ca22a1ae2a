@@ -1,0 +1,28 @@
+package com.qait.gateway.testCases;
+
+import javax.swing.JOptionPane;
+
+import org.openqa.selenium.WebDriver;
+
+import com.qait.gateway.deploytool.DeploymentToolLogin;
+import com.qait.gateway.deploytool.LTICourseCreation;
+
+public class TestSuite_1 extends UiUtils{
+	
+	static WebDriver driver;
+	
+	public WebDriver PreConditions(){
+		String browser=JOptionPane.showInputDialog("Brower?");	//JOption pane to take the input for desired browser
+		return driver=SelectBrowser(browser);
+	}
+	
+	public void logginIntoDeploymentTool() {
+	new DeploymentToolLogin().ValidLogin(driver);
+	}
+	
+	public void createLTICourse(){
+	new LTICourseCreation()
+	}
+	
+	
+}

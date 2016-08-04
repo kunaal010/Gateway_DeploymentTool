@@ -1,0 +1,13 @@
+package com.qait.gateway.deploytool;
+
+import com.qait.gateway.Utils.UiUtils;
+
+public class DeploymentToolLogin extends UiUtils {
+
+	public void ValidLogin(){
+		
+		
+	}
+	
+}
+

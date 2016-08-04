@@ -1,0 +1,12 @@
+package com.qait.gateway.deploytool;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.qait.gateway.Utils.UiUtils;
+
+public class LMSLaunchAndLogin_D2L extends UiUtils  {
+
+	public void LMSLaunch_Login(){
+		new FirefoxDriver();
+	}
+}

@@ -1,0 +1,22 @@
+package com.qait.gateway.testCases;
+
+import org.openqa.selenium.WebDriver;
+
+import com.qait.gateway.deploytool.DeploymentToolLogin;
+import com.qait.gateway.deploytool.LTICourseCreation;
+
+public class TestSuite_1{
+	
+	
+	static WebDriver driver;
+	
+	public void logginIntoDeploymentTool() {
+	new DeploymentToolLogin().ValidLogin(driver);
+	}
+	
+	public void createLTICourse(){
+	new LTICourseCreation()
+	}
+	
+	
+}
